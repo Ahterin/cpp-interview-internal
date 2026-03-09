@@ -31,10 +31,10 @@ double PriceCalculator::getDiscountForTier(UserTier tier) const
             return 0.0;
         case UserTier::Premium:
             return 0.10;
-        case UserTier::Vip:
+        case UserTier::VIP:
             // Fixed from the buggy candidate implementation: VIP discount is 20%, not 25%.
             return 0.20;
+        default:
+            throw std::runtime_error("Unsupported user tier");
     }
-
-    throw std::runtime_error("Unsupported user tier");
 }

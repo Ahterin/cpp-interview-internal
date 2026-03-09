@@ -30,9 +30,9 @@ TEST(PriceCalculatorTests, PremiumUserGetsTenPercentDiscount) {
 }
 
 // Added to catch the original VIP regression (candidate branch used 25%).
-TEST(PriceCalculatorTests, VipUserGetsTwentyPercentDiscount) {
+TEST(PriceCalculatorTests, VIPUserGetsTwentyPercentDiscount) {
     FakeUserTierProvider provider;
-    provider.setTier("charlie", UserTier::Vip);
+    provider.setTier("charlie", UserTier::VIP);
 
     const PriceCalculator calculator(provider);
     const double finalPrice = calculator.calculateFinalPrice("charlie", 100.0);

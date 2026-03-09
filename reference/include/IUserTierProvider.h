@@ -6,7 +6,7 @@ enum class UserTier
 {
     Regular,
     Premium,
-    Vip
+    VIP
 };
 
 class IUserTierProvider
